@@ -17,3 +17,10 @@ def write_redshift(df, aws_endpoint, port, db_name, table_name, username, passwo
         .option("user", f"{username}") \
         .option("password", f"{password}") \
         .save()
+
+
+def write_s3(df, bucket_path, key):
+    df.write.mode('append') \
+        .format('parquet') \
+        .option('header', 'true') \
+        .save(f's3a://{bucket_path}/{key}')

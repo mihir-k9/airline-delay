@@ -10,10 +10,10 @@ def read_local(root_path, file_name, spark):
     return df
 
 
-def read_s3(bucket_path, table_name, spark):
+def read_s3(bucket_path, key, spark):
 
     df = spark.read \
-        .parquet(f's3a://{bucket_path}/{table_name}')
+        .parquet(f's3a://{bucket_path}/{key}')
 
     return df
 

@@ -11,3 +11,4 @@ venv.bak/
 data/flights*.csv
 
 .idea/
+temp/
