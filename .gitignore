@@ -9,4 +9,5 @@ venv.bak/
 
 # Raw data
 data/flights*.csv
-dummy.csv
+
+.idea/
